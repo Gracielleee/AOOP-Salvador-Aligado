@@ -13,7 +13,7 @@ public abstract class Payslip implements PayslipDao{
     private static double totalOvertimeHours;
     private static double grossIncome;
     private static double totalBenefits;
-    private static int taxAndDeductionID;
+    private static int taxAndDeductionId;
     private static double netIncome;
     
 
@@ -29,7 +29,7 @@ public abstract class Payslip implements PayslipDao{
         this.totalOvertimeHours = totalOvertimeHours;
         this.grossIncome = grossIncome;
         this.totalBenefits = totalBenefits;
-        this.taxAndDeductionID = taxAndDeductionId;
+        this.taxAndDeductionId = taxAndDeductionId;
         this.netIncome = netIncome;
     }
     
@@ -99,11 +99,11 @@ public abstract class Payslip implements PayslipDao{
     }
 
     public static int getTaxAndDeductionID() {
-        return taxAndDeductionID;
+        return taxAndDeductionId;
     }
 
     public static void setTaxAndDeductionID(int taxAndDeductionID) {
-        Payslip.taxAndDeductionID = taxAndDeductionID;
+        Payslip.taxAndDeductionId = taxAndDeductionID;
     }
 
     public static double getNetIncome() {
@@ -116,6 +116,18 @@ public abstract class Payslip implements PayslipDao{
 
     @Override
     public String toString() {
-        return "Payslip{" + '}';
+        return "Payslip{" +
+                "payslipId=" + payslipId +
+                ", employeeId=" + employeeId +
+                ", payPeriodId=" + payPeriodId +
+                ", daysWorked=" + daysWorked +
+                ", totalHoursWorked=" + totalHoursWorked +
+                ", totalOvertimeHours=" + totalOvertimeHours +
+                ", grossIncome=" + grossIncome +
+                ", totalBenefits=" + totalBenefits +
+                ", employeeId=" + employeeId +
+                ", taxAndDeductionID=" + taxAndDeductionId +
+                ", netIncome=" + netIncome +
+                '}';
     }
 }
