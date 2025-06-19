@@ -33,7 +33,7 @@ public class DatabaseConnection {
             try {
                 // Load properties file containing database credentials
                 Properties properties = new Properties();
-                try (InputStream input = DatabaseConnection.class.getClassLoader().getResourceAsStream("database.properties")) {
+                try (InputStream input = DatabaseConnection.class.getClassLoader().getResourceAsStream("database.properties");) {
                     // Check if the properties file is found
                     if (input == null) {
                         System.out.println("Sorry, unable to find database.properties");
